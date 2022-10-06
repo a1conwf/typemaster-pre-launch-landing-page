@@ -1,0 +1,49 @@
+@import "./base";
+
+//Buttons
+
+.btn {
+	max-width: 150px;
+	padding: 11px 14px;
+	font-size: 1.3rem;
+	font-weight: 700;
+	line-height: 26px;
+	text-transform: uppercase;
+	border: none;
+	outline: none;
+	border-radius: 8px;
+	cursor: pointer;
+
+	&.org,
+	&.gry {
+		transition: 0.3s ease-out;
+	}
+
+	&.org {
+		color: $white;
+		background-color: $orange;
+
+		&:hover {
+			color: $white;
+			background-color: $lightOrange;
+		}
+	}
+
+	&.gry {
+		color: $darkBlue;
+		background-color: $grey;
+
+		&:hover {
+			color: $white;
+			background-color: $darkBlue;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.btn {
+		max-width: 175px;
+		padding: 16px 26px;
+		font-size: 1.4rem;
+	}
+}

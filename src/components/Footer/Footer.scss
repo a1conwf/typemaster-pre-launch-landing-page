@@ -1,0 +1,22 @@
+.footer {
+	text-align: center;
+	padding-bottom: 50px;
+
+	&__text {
+		span {
+			font-weight: 700;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.footer {
+		padding-bottom: 43px;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.footer {
+		padding-bottom: 39px;
+	}
+}

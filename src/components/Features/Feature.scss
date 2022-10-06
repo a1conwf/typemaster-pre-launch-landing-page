@@ -1,0 +1,49 @@
+@import "../../sass/_base";
+
+.feature {
+	text-align: center;
+
+	&__icon {
+		width: 65px;
+		height: 65px;
+		padding: 20px;
+		margin-bottom: 48px;
+		background-color: $orange;
+		border-radius: 16px;
+	}
+
+	&__title {
+		max-width: 215px;
+		margin: 0 auto 24px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.feature {
+		text-align: left;
+
+		&__icon {
+			margin-bottom: 40px;
+		}
+
+		&__title {
+			margin: 0 0 24px;
+		}
+
+		&__description {
+			max-width: 281px;
+		}
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.feature {
+		&__icon {
+			margin-bottom: 48px;
+		}
+
+		&__description {
+			max-width: 255px;
+		}
+	}
+}

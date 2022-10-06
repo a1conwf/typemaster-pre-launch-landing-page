@@ -1,0 +1,153 @@
+@import "../../sass/base";
+
+.header {
+	margin-bottom: 24px;
+	overflow: hidden;
+
+	&__top {
+		padding: 23px 0 64px;
+		@include flex(row, center, space-between);
+
+		.logo {
+			height: 40px;
+		}
+	}
+
+	&__bottom {
+		display: grid;
+		grid-template-columns: 300px;
+		grid-template-rows: 286px 331px;
+		grid-gap: 69px;
+
+		&-content {
+			h1,
+			p {
+				margin-bottom: 32px;
+			}
+
+			.order {
+				@include flex(row, center, space-between);
+
+				span {
+					font-weight: 700;
+					text-transform: uppercase;
+				}
+			}
+		}
+
+		&-img {
+			width: 372px;
+
+			img {
+				width: 100%;
+				object-fit: contain;
+				border-radius: 20px;
+			}
+
+			.img-tab,
+			.img-desk,
+			.pattern {
+				display: none;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 375px) {
+	.header__bottom {
+		grid-template-columns: 327px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.header {
+		margin-bottom: 40px;
+
+		&__top {
+			padding: 40px 0 62px;
+		}
+
+		&__bottom {
+			grid-template-columns: 339px 478px;
+			grid-template-rows: auto;
+			grid-gap: 125px;
+			place-items: center;
+
+			&-content {
+				h1 {
+					margin-bottom: 34px;
+				}
+
+				p {
+					margin-bottom: 39px;
+				}
+			}
+
+			&-img {
+				width: 478px;
+
+				.img-mob {
+					display: none;
+				}
+
+				.img-tab {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.header {
+		margin-bottom: 30px;
+
+		&__top {
+			padding: 55px 0 83px;
+		}
+
+		&__bottom {
+			grid-template-columns: 445px 1fr;
+
+			&-content {
+				h1 {
+					margin-bottom: 24px;
+				}
+
+				p {
+					margin-bottom: 40px;
+					font-size: 1.8rem;
+				}
+
+				.order {
+					justify-content: flex-start;
+
+					.btn {
+						margin-right: 40px;
+					}
+				}
+			}
+
+			&-img {
+				width: 540px;
+				display: grid;
+				grid-template-columns: 540px 255px;
+				grid-gap: 30px;
+
+				.pattern {
+					display: block;
+					width: 255px;
+				}
+
+				.img-mob,
+				.img-tab {
+					display: none;
+				}
+
+				.img-desk {
+					display: block;
+				}
+			}
+		}
+	}
+}
